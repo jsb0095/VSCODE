@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    
+    <script>
+        $(function(){
+            $("button").on("click",function(){
+            $(":checked").next().text("체크되어 있습니다.");
+            });     //:cheaked는 파일 전체에 체크한 항목을 찾음                   
+        });
+    </script>
+</head>
+<body>
+    <h2>체크박스 체크</h2>
+    <form name="form1"><!--div는 줄바꿈이된다  span은 줄바꿈이 되지않는다 -->
+        <input type="checkbox"  name="chk"  value="h"><div>Html</div>
+        <input type="checkbox"  name="chk"  value="c"><span>css</span>
+        <input type="checkbox"  name="chk"  value="j"><span>javascript</span>
+        <input type="checkbox"  name="chk"  value="q"><span>jQuery</span>
+        </form>
+        <button>선택</button>
+
+</body>
+</html>

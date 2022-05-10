@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <style>
+        table,tr,td{
+            border: 2px solid rgb(46, 4, 230);
+            border-collapse:collapse;
+        }
+        table{margin-bottom: 15px;}
+    </style>
+    <script>
+       $(function(){  
+           $("#btn4").on("click",function(){
+                $("<td>선택한 요소의 해당 요소 앞에 삽입 동작은 같지만 소스와 타겟의 위치가 서로 반대.</td>").insertBefore("#sCol");
+           
+            });
+           $("#btn5").on("click",function(){
+                $("<td>선택한 요소의 해당 요소 뒤에 삽입 동작은 같지만 소스와 타겟의 위치가 서로 반대</td>").insertAfter("#sCol");
+            });
+        });
+
+    </script>
+  
+</head>
+<body>
+    <h1>insertBefore,insertAftter</h1>
+    <table>
+    <tr>
+        <td>첫번째 </td>
+        <td id="sCol">두번째 </td>
+    </tr>
+</table>
+<button id="btn4">insertBefore</button>
+<button id="btn5">insertAfter</button>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>나이 알리미</title>
+    </head>
+    <body>
+        <script>
+            function cal()
+            {              
+                
+                var msg="";
+                var name=document.form1.name.value;
+                var age=parseInt(document.form1.age.value);
+                
+                if(age<13)
+                {
+                    msg="어린이";
+                }
+                else if(age<20)
+                {
+                    msg="청소년";
+                }
+                else
+                {
+                    msg="성인";
+                }
+                alert(name+"님의" + "나이는" +age+ "로"+msg+ "입니다");
+            }
+        </script>
+        
+        <form name="form1"method="get"> 
+            이름:<input type="text" name="name" size="5"value=""/></br>
+            나이:<input type="text" name="age" size="5"value=""/>
+            
+            <input type="button" name="result" onClick="cal()"value="확인"/>
+        </form>
+        
+    </body>
+    
+</html>

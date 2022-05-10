@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script>
+       $(function(){  
+            $("#fBtn").on("click", function(){
+                $("#fitem").appendTo("#list");
+            });
+            $("#sBtn").on("click", function(){
+                $("#sitem").appendTo("#list");
+            });
+            $("#tBtn").on("click", function(){
+                $("#titem").appendTo("#list");
+            });    
+             //appendTo선택한 요소를 해당 요소의 마지막에 삽입 동작은 append와 같지만 소스와 타겟의 위치가 서로 반대
+            $("#btn1").on("click",function(){
+                $("<b>)새로 추가 되었습니다.</b>").prependTo(".item");
+            });//선택한 요소를 해당 요소의 마지막에 삽입 동작은 prepend와 같지만 소스와 타겟의 위치가 서로 반대
+            
+        });
+    </script>
+  
+</head>
+<body>
+    <h1>appendTO</h1>
+    <p>아래 버튼을 눌러보세요</p>
+    <ul id="list">
+        <li id="fitem">첫번째 입니다.</li>
+        <li id="sitem">두번째 입니다</li>
+        <li id="titem">세번째 입니다</li>
+    </ul>   
+    <button id="fBtn">첫번째 추가입니다.</button>
+    <button id="sBtn">두번째 추가입니다.</button>
+    <button id="tBtn">세번째 추가입니다.</button>
+
+    <h1>prependTO</h1>
+    <p>아래 버튼을 눌러보세요</p>
+    <ul>
+        <li class="item">첫번째 입니다.</li>
+        <li class="item">두번째 입니다</li>
+        <li class="item">세번째 입니다</li>
+    </ul>   
+    <button id="btn1">첫번째 추가입니다.</button>
+    
+</body>
+</html>

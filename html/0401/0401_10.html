@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  
+    <script>
+    $(function(){
+        $("#btn").on("click",function(){
+            $(".cont").remove(".first, .second");
+        });//remove는 선택한 요소의 지정한 값을 삭제/ex)첫번째 두번째 값 삭제 
+    });
+    </script>
+  
+</head>
+<body>
+   
+
+    <h1>remove</h1>
+<div>
+    <div class="cont first">첫번째 입니다.</div>
+    <div class="cont second">두번째 입니다.</div>
+    <div class="cont third">세번째 입니다.</div>
+</div>
+<button id="btn">remove</button>
+</body>
+</html>

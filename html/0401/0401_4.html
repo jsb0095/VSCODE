@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script>
+    $(function(){
+            $("#btn1").on("click", function(){
+                $("#list").append("<li>append는 선택한 요소의 마지막에 새로운 요소를 추가합니다.</li>");
+                
+            });
+    
+            $("#btn2").on("click", function(){
+                $("#list2").prepend("<li>prepend는 선택한 요소의 처음에 새로운 요소를 추가합니다.</li>");
+            });
+
+            $("#btn3").on("click", function(){
+                location.reload();//(새로고침 처럼 값이 날아간다)
+            });  
+            $("#btn4").on("click", function(){
+                location.reload();
+            });    
+    });
+    </script>
+</head>
+<body>
+    <h1>append</h1>
+   <ul id="list">
+    <li>첫번째 순서입니다</li>
+    <li>두번째 순서입니다</li>
+    <li>세번째 순서입니다</li>
+</ul>
+<button id="btn1">테스트 변경</button>
+<button id="btn4">reset</button>
+<hr>
+<h1>prepend</h1>
+<ul id="list2">
+    <li>첫번째 순서입니다</li>
+    <li>두번째 순서입니다</li>
+    <li>세번째 순서입니다</li>
+    <button id="btn2">테스트 변경</button>
+    <button id="btn3">reset</button>
+    
+
+</body>
+</html>

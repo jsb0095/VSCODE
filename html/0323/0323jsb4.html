@@ -1,0 +1,53 @@
+!DOCTYPE html>
+<html>
+    <head>
+       
+    </head>
+    <body>
+    <h1>문자열 타입</h1>
+    <p id="str"></p>    
+    <script>
+        var firststr="이것도 문자열입니다";
+        var secondstr='이것도 문자열 입니다';
+        var thirdstr="나의 이름은'홍길동'입니다";//"a'< 이렇게 혼동해서 쓰지만 않으면 상관없음 같은 문자열로 인식 
+        var fourstr='나의 이름은"홍길동"입니다';
+
+        document.getElementById("str").innerHTML=firststr+"<br/>"+
+        secondstr+"<br/>"+thirdstr+"<br/>"+fourstr+"<br/>";
+
+
+    </script>
+     <br/>
+     <p id="result"></p>
+     <script>
+         var firstNum=10;
+         var secondNum=10;
+                                                    /*firstNum(10)==secondNum(10)같으므로 true*/
+         document.getElementById("result").innerHTML=(firstNum==secondNum)
+
+     </script>
+     <br/>
+     <p id="result2"></p>
+     <script>
+         var num=10
+         document.getElementById("result2").innerHTML=(typeof num)+"<br/>";
+         document.getElementById("result2").innerHTML+=(typeof "문자열")+"<br/>";
+         document.getElementById("result2").innerHTML+=(typeof true)+"<br/>";
+         document.getElementById("result2").innerHTML+=(typeof undefined)+"<br/>";
+         document.getElementById("result2").innerHTML+=(typeof null);
+                                                    /*typeof는 앞에 값의 타입을 표현해준다*/
+         </script>                               
+         <br/>
+         <h1>null과 undifned</h1>
+         <p id="result3"></p>
+         <script>
+             var num3;
+             var str3=null;//null은 object타입은 있지만 값이 없다
+             document.getElementById("result3").innerHTML=(typeof num3)+"<br/>";
+             document.getElementById("result3").innerHTML+=(typeof str3)+"<br/>"
+             document.getElementById("result3").innerHTML+=(typeof secondNum2);
+                                                    /*undifned은 타입과 값이 없을때 출력 */
+         </script>
+    </body>
+    </html>
+    

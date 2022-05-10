@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+<form action="member.isp"method="get">
+이름:<input type="text" name="my_name" size="25"><br/><br/>
+비밀번호:<input type="password"name="my_password"siz="15"><br/><br/>
+연락처:<input type="text" name="uppone1" size="3"/>-
+       <input type="text" name="uppone2" size="3"/>-
+       <input type="text" name="uppone3" size="3"/>
+<br/>
+<br/>
+       이미지:<input type="file" src="filename">
+<br/>
+<br/>
+       <input type="radio" name=gender value="남" >남
+       <input type="radio" name=gender value="여">여
+<br/><br/>
+사용언어=<input type="checkbox" name="language" value="한글"checked>한글
+       <input type="checkbox" name="language" value="영어">영어
+       <input type="checkbox" name="language" value="일어">일어
+       <input type="checkbox" name="language" value="중국">중국   
+<table>
+       <tr>
+       <td>자기소개:</td>
+       <td><textarea rows="3"colspan="10">간단하게입력하세요</textarea></td><br/><br/>
+</tr>
+<tr>
+<td>국적:</td>
+<td>
+       <select>
+   <option value="korea">korea</option>
+   <option value="usa">usa</option>
+   <option value="italy">italy</option>
+   <option value="china">china</option>
+</tr>
+</td>
+     </select><br/><br/>
+     <tr>
+<td>좋아하는음식:</td>
+<td>
+<select multiple="multiple">
+    <option>김치</option>
+   <option>불고기</option>
+   <option>파전</option>
+   <option>비빔밥</option>
+</td>
+</tr>
+</select><br/>
+</table>
+<input type="submit"/>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html >
+<head>
+  
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script>
+    $(function(){
+        $("button").on("click",function(){                         //end메서드를 사용하면 바로 이전에 선택했던 요소의 집합을 다시 선택할수있음
+          $("#list").find("li").eq(1).html("두번째 테스트 변경합니다").end().eq(2).html("세번째 택스트도 변경합니다");
+        });                     //eq매소드를 사용하여 (값)의 위치에 ("두번째 테스트 변경합니다");을 전달
+    });
+   
+</script>
+</head>
+<body>
+   
+<h3>메서드 체이닝</h3>
+<ul id="list">
+    <li>첫번째 순서입니다</li>
+    <li>두번째 순서입니다</li>
+    <li>세번째 순서입니다</li>
+</ul>
+<button>테스트 변경</button>
+</body>
+</html>

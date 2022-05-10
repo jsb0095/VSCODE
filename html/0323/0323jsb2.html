@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            //function 함수선언을 하는 키워드
+             function printDate()
+            {
+              //var키워드로 변수를 선언한다
+              var str= document.getElementById("date");
+                 //str은String의 약자로 문자열
+              str.innerHTML= Date();
+            }                //소문자date로 입력시 에러
+        </script>
+      
+    </head>
+    <body>                                        
+     <h1>head내의 자바 스크립트</h1>
+     <p>자바스크립트를 이용하면 현재 날씨와 시간 정보에도 손쉽게 접할수 있어요</p>
+     <button onclick="printDate()">현재 날씨와 시간표시하기</button>
+     <p id="date"></p>
+    </body>
+</html>

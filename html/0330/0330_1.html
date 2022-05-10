@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>배열</h1>
+        <script>
+
+            var arrList=[1, true, "Javascript"];
+            var arrObj=Array(1, true, "Javascript");
+            var arrNewObj=new Array(1, true, "Javascript");
+
+            document.write("arrList :"+arrList+"<br/>");
+            document.write("arrObj :"+arrObj+"<br/>");
+            document.write("arrNewObj :"+arrNewObj+"<br/>");
+        </script>
+        <br/>
+        <h1>배열 참고</h1>
+        <script>
+            var arr=["javaSciprt"];
+            var ele=arr[0];
+       
+            arr[1]=10;
+            arr[2]=ele;
+
+            document.write("배열arr의 요소는+["+arr+"]입니다.<br/>");
+            document.write("배열arr의 길이는+["+arr.length+"]입니다.<br/>");
+
+            delete arr[2];
+            document.write("배열arr의 요소는+["+arr+"]입니다.<br/>");
+            document.write("배열arr의 길이는+["+arr.length+"]입니다.<br/>");
+        </script>
+        <h1>배열에 추가</h1>
+        <script>
+            //[인덱스]는 0,1,2,3,4 0부터 시작
+            //length는 1,2,3,4,5 1부터 시작
+            var arr=[1,true,"java"];
+            
+            arr.push("script");
+            document.write(arr+"<br/>");
+
+            arr[arr.length]=100;
+            document.write(arr+"<br/>");
+
+            arr[10]="자바스크립트";//11번째 자바스크립트 문자열이 들어가 그사이에 있는 undefined은 ,,,,로 표시되며 undefined나타난다
+            document.write(arr+"<br/>");
+            document.write(arr[7]+"<br/>");
+           //undefined변수는 존재하나, 어떠한 값으로도 할당되지 않아 자료형이 정해지지(undefined) 않은 상태입니다.
+            //
+           
+    </script>
+    
+    <h1>배열 읽기</h1>
+    <script>
+       
+        arr=[1,true,"javascript"];
+        var result="<table border=1><tr>";
+        
+        for(var idx in arr)
+        {
+            result+="<td>"+arr[idx]+"</td>";
+        }
+        result+="</tr></table>";
+
+        document.write(result);
+  
+       
+</script>
+<h1>연습</h1>
+<script>
+    var table="<table border=1><tr>";
+    var s=[1,true,"javaSciprt"];
+                //s.length=3
+   for(var c=0;c<s.length;c++)
+   {
+        table+="<td>"+s[c]+"</td>";
+   }
+        table+="</tr></table>";
+        document.write(table);
+</script>
+    </body>
+</html>

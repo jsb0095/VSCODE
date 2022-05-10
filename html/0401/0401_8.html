@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <style>
+        div{
+            margin: 10px;
+        }
+        .content{
+            border: 2px solid orange;
+        }
+        .wrap{
+            border: 2px solid red;
+        }
+    </style>
+    <script>
+    $(function(){
+        $("#btn1").on("click",function(){
+            //#=id .=class로 구분    
+            $(".content").wrap("<div class='wrap'></div>");
+        });             //wrap은선택한 요소를 포함하는 새로운 요소를 추가
+        $("#btn2").on("click",function(){
+            $(".content").wrapAll("<div class='wrap'></div>");
+        });             //wrapAll은선택한 모든 요소를 포함하는  새로운 요소를 추가 
+    });
+    </script>
+  
+</head>
+<body>
+    <h1>wrab,wrabAll</h1>
+    <div class="content">첫번째 div</div>
+    <div class="content">두번째 div</div>
+    <button id="btn1">wrap 추가</button>&nbsp;
+    <button id="btn2">wrapAll</button>
+   
+
+</body>
+</html>

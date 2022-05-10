@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    점수입력:<input id="score">
+    <button onclick="gerade()">성적계산</button>
+    <div id="result">학점:</div>
+</body>
+<script>
+    function gerade()
+    {   let grade="";
+       let score= document.getElementById("score").value;
+        document.getElementById("result");
+        if(score>=90)
+        {grade="A";
+        }else if(score>=80)
+        {grade="B";
+        }else
+        {grade="F";
+        }
+        const result= document.getElementById("result")
+        result.innerHTML =grade;
+    }
+</script>
+</html>

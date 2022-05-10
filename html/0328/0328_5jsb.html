@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>숫자 판독기</title>
+        <script>
+            function num2()
+            {
+                var name="";
+                var star=document.form1.num1.value;
+
+                if(star>0)
+                {
+                    name = "양수 입니다";
+                }
+
+                if (star==0)     
+                {
+                    name="0입니다";
+                }
+
+                if (star<0) 
+                {
+                    name="음수 입니다";
+                }
+                    alert(name);
+            }
+            
+        </script>
+    </head>
+    <body>
+       <form name="form1">
+           <input type="text" name="num1" value="">
+
+           <input type="button" onclick="num2()" name="result" value="확인">
+           
+       </form>
+      
+       
+        
+    </body>
+    
+</html>

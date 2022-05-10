@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>//(document).ready문서가 준비되면 매개변수로 넣은 콜백 함수를 실행하라는 의미
+  $(document).ready(function(){
+    $("#doc").text("문서가 로드 되었습니다.");//ready가 load보다 먼저 실행됨 
+  });//(window).load는 해당 페이지의 모든 외부 리소스, 이미지 등이 로드 된 후에 처리가 됩니다.
+  $(window).load(function(){
+    $("#win").text("창이 로드 되었습니다.");
+  });
+
+</script>
+<body>
+    <h>현재 페이지와 창이 모두 로드되고 나서 </h>
+<p>결과 보기를 다시 눌러보면서 차이를 살펴보세요.</p>
+    <iframe src="http://www.icia.co.kr"width="100%" height="230px"></iframe>
+    <p id="doc">기다려주세요</p>
+    <p id="win">기다려주세요.</p>
+</body>
+</html>

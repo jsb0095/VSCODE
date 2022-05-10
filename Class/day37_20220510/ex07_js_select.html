@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="food" onchange="foodSelect()">
+        <option value="육회">육회</option>
+        <option value="회">회</option>
+        <option value="마라탕">마라탕</option>
+        <option value="고추잡채">고추잡채</option>
+    </select>
+    <p id="select-result"></p>
+    
+</body>
+<script>
+    function foodSelect(){
+        console.log("함수호출");
+        const food= document.getElementById("food").value;
+        console.log(`선택한음식: ${food}`);
+        const selectResult= document.getElementById("select-result");
+        selectResult.innerHTML = `선택한 음식: ${food}`;
+    }
+</script>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function cal()
+            {               //dacument. 문서에서 form1이라는 이름의 value값을 가져온다
+                var number1 = document.form1.num1.value;
+                if(document.form1.num1.value=="")
+              
+            {   //alert는 경고창 이벤트
+                alert("값을 입력하세요."); 
+                document.form1.num1.focus();// 텍스트 영역에 포커스(깜빡거림) 설정
+                return;                   
+             }  //return 리턴값이란 함수가 어떠한 기능을 수행하고 그 결과를 호출한 곳으로 돌려주는 값을 말합니다
+             if(isNaN(number1))//개체변수가 숫자인지 검사하는 함수입니다.(NaN은 Not a Number입니다.)
+             {
+                alert("숫자만 입력 가능합니다. 다시 입력하세요");
+                document.form1.num1.value=""//                          ""값이 num1로 넘어가고 value로 input type의 text,로 값이 넘어간다
+                document.form1.num1.focus();
+                return;
+             }
+             if(number1%2==0)       //몫과 나머지 개념
+             {
+                alert("입력한 값은 짝수입니다.")
+            }
+            
+            else if(number1%2!=0)
+             {
+            alert("입력한 값은 홀수입니다.")
+            
+            
+            }
+            else
+            {
+            alert("입력한 값은 알수 없습니다.")
+            
+            }
+            }
+
+          </script>
+    </head>
+    <body>
+        <h1>짝홀수 맞추기</h1>
+        <p>값을 입력하세요.</p>
+    <form name="form1"method="get"action="0325_3.html">
+    숫자: <input type="text"name="num1" id="num1"value="" size="5">&nbsp;
+    <input type="button" name="result" onClick="cal()"value="계산하기"/>
+                                                        <!--value 버튼 이름설정하는 부분-->
+    </body>
+</form>
+</html>

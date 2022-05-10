@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        이름:<input type="text" name="my_name" size="25"><br/> <br/>
+        비밀번호:<input type="password"name="my_password"siz="20"><br/> <br/>
+        <input type="text"name="my_name2"size="30" value="수정불가" readonly>
+        <br/><br/>
+        <input type="radio" name=food value="치킨" checked>치킨
+        <input type="radio" name=food value="피자">피자
+        <input type="radio" name=food value="짜장면">짜장면
+        <input type="radio" name=food value="짬뽕">짬뽕
+        <br/><br/>
+        <input type="checkbox" name="computer" value="cpu" checked>cpu
+        <input type="checkbox" name="computer" value="memory">memory
+        <input type="checkbox" name="computer" value="hdd">hdd
+        <input type="checkbox" name="computer" value="cdrom">cdrom
+        <input type="checkbox" name="computer" value="grapic_card">grapic_card
+        <br/><br/>
+        <select name="items1">
+            <option value="Html">Html</option>
+            <option value="자바스크립트">자바스크립트</option>
+            <option value="css">css</option>
+        </select>
+        <br/><br/>
+        <select name="items2" size="3">
+            <option value="Html">Html</option>
+            <option value="자바스크립트">자바스크립트</option>
+            <option value="css">css</option>
+        </select>
+             <br/><br/>
+            <input type="button" value="로그인화면">
+            <input type="submit" value="회원가입">
+            <input type="reset" value="다시입력">
+            <br/><br/>
+            이미지:<input type="image" src="../jsp/차.jpg"img width="100"height="100">
+            <br/> <br/>
+            이미지:<input type="file" src="filename"> <br/> <br/>
+        
+            <form action="mothod" value="get">
+             이름:<input type="text" name="my_name" size="25"><br/> <br/>
+             비밀번호:<input type="password"name="my_password"siz="20"><br/> <br/>
+             연락처:<input type="text" name="uppone1" size="3"/>
+                <input type="text" name="uppone2" size="3"/>
+                <input type="text" name="uppone3" size="3"/>
+         <br/> <br/>
+                이미지:<input type="file" src="filename">
+         <br/> <br/>
+                <input type="radio" name=sex value="남" >남
+                <input type="radio" name=sex value="여">여
+        <br/> <br/>
+        사용언어=<input type="checkbox" name="language" value="한글"checked>한글
+                <input type="checkbox" name="language" value="영어">영어
+                <input type="checkbox" name="language" value="일어">일어
+                <input type="checkbox" name="language" value="중국">중국 <br/> <br/>자기소개 <br/>
+                <textarea rows="3"colspan="10">간단하게입력하세요</textarea><br/> <br/>
+        국적:<select>
+            <option value="korea">korea</option>
+            <option value="usa">usa</option>
+            <option value="italy">italy</option>
+            <option value="china">china</option>
+              </select><br/><br/>좋아하는음식<br/> <br/>
+            <select multiple="multiple">
+             <option>김치</option>
+            <option>불고기</option>
+            <option>파전</option>
+            <option>비빔밥</option>
+        </select><br/> <br/>
+        <input type="submit"/>
+
+            </form>
+    </body>
+</html>

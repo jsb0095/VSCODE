@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>
+    var i=1;
+    function func()
+    {
+        addAtt();
+        createEL();
+    }
+    function addAtt()
+    {
+        document.getElementById("para").setAttribute("style","color:red")
+    }                                      // setAttribute은 (스타일)속성 및(레드) 값 설정
+    function createEL()
+    {
+       var crNode=document.getElementById("para");//para=style","color:red"
+       var newNode=document.createElement("p");//createElement("")태그생성
+       newNode.innerHTML="새로운 단락입니다["+i++ +"]";//<p>새로운 단락입니다[1]후치 </p>
+       newNode.setAttribute("id","para");//<p id="para">새로운 단락입니다[1]후치 </p>
+       document.body.insertBefore(newNode,crNode);//<p id="para" "style= color:red">새로운 단락입니다[1]후치 </p>
+    }//          insertBefore:요소를 삽입할곳 "앞"에 추가
+</script>
+          
+    </head>
+    <body>
+<h1>요소 추가</h1>
+<button onclick="func()">속성추가</button>
+<p id="para"></p>
+    </body>
+    
+</html>

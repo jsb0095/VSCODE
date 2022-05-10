@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <style>
+        table,tr,td{
+            border: 2px solid rgb(46, 4, 230);
+            border-collapse:collapse;
+        }
+        table{margin-bottom: 15px;}
+    </style>
+    <script>
+       $(function(){  
+           $("#btn").on("click",function(){
+                $("#fRow").before("<tr><td>선택한 요소앞에 새로 추가합니다.</td></tr>");
+           });
+           $("#btn3").on("click", function(){
+               $("#fRow").after("<tr><td>선택한 요소뒤에 새로 추가합니다.</td></tr>");
+           });
+        });
+
+    </script>
+  
+</head>
+<body>
+    <h1>before,after</h1>
+    <table>
+    <tr id="fRow">
+        <td>첫번째 셀</td>
+        <td>두번째 셀</td>
+    </tr>
+</table>
+<button id="btn">앞에추가</button>
+<button id="btn3">뒤에추가</button>
+
+
+        
+    
+</body>
+</html>

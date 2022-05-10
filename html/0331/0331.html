@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function addnum()
+            {
+                var sum=0;
+                for(var i=0;i<arguments.length;i++)
+                {//arguments 객체는 함수 호출시 넘긴 인자를 배열 형태로 저장한다*유사배열*
+                    sum+=arguments[i];//함수선언
+                }
+                return sum;
+            }
+
+    </script>   
+    </head>
+    <h1>파라미터 객체</h1>
+    <body>
+    <script>
+        document.write("addnum(1,2,3,):"+addnum(1,2,3,));//함수호출
+        document.write("addnum(1,2,):"+addnum(1,2,));
+        document.write("addnum(1):"+addnum(1));
+        document.write("addnum():"+addnum());
+        document.write("addnum(1,2,3,4,5,6,7,8,9):"+addnum(1,2,3,4,5,6,7,8,9));
+    </script>   
+    <h1>indexOf</h1>
+    <script>                                                             
+        var str="abcDEFabc";                                             //0 1 2 3 4 5 6 7 8
+        document.write("str.indexOf('abc'):"+str.indexOf('abc')+"<br/>");//a b c D E F a b c 
+        document.write("str.indexOf('abcd'):"+str.indexOf('abcd')+"<br/>");//같은 문자열이 없으면 -1
+        document.write("str.indexOf('abc',3):"+str.indexOf('abc',3)+"<br/>");//D이후로 오는 첫abc인덱스
+        //                               inDexOf는 특정 문자의 위치를 찾는 함수 
+
+    </script>
+    <h1>charAt</h1>
+    <script>
+        var str="abcDEFabc";                //charAt(값)의 문자를 읽어준다  
+         document.write("str.charAt(0):"+str.charAt(0)+"<br/>");
+         document.write("str.charAt(10):"+str.charAt(10)+"<br/>");
+                                            //10번째의 인덱스는 존재하지 않으므로 ubdefined로 나타남
+    </script>                                   
+    <h1>substring,trim</h1>
+    <script>   //012345678
+        var str="abcDEFabc";
+         document.write("str.substring(2,6):"+str.substring(2,6)+"<br/>");//문자열c(2)~f(5)(6이전값까지 나타냄)
+         var str2="         javascript"
+         document.write("str2:["+str2+"]<br/>");
+         document.write("str2.trim();["+str2.trim()+"]<br/>");//trim은 공백값을 제거해준다
+        </script>
+        <h1>toUpperCase,toLowerCase</h1>
+        <script>
+             str2="JabaScript";                       //toUpperCase()대문자로 변환
+             document.write("str2.toUpperCase():"+str2.toUpperCase()+"<br/>");
+             document.write("str2.toLowerCase():"+str2.toLowerCase()+"<br/>");
+                                                        //toLowerCase()소문자로 변환
+            </script>                                   
+
+    </body>
+    
+</html>

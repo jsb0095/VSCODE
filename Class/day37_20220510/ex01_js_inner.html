@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="id1">
+        안녕하세요
+       
+    </div>
+    <div id="ul-ex">
+    <ul>
+        <li>1</li>
+        <li>1</li>
+    </ul>
+</div>
+    <button onclick="fun1()">클릭</button>
+    <button onclick="fun2()">ul만들기</button>
+    <!--위의 버튼 클릭하면 fun2 함수 호출하고 fun2함수는 ul-ex영역에 for문을 이용하여 1부터 7까지 값을 ul,;i태그로 출력해보기-->
+    
+</body>
+<script>
+    function fun1(){
+        const div1= document.getElementById("id1");
+        console.log(div1.innerHTML);
+        div1.innerHTML="<h2 id='id3'>반갑습니다<h2>";
+        // h2가 적용된반갑습니다를 화면에 출력 
+       
+        }
+        function fun2(){
+            const div2=document.getElementById("ul-ex");
+            // let ulElement= "<ul>"+
+            //                 "<li>1</li>"+
+            //                 "<li>2</li>"+
+            //                 "<li>3</li>"+
+            //                 "</ul>"
+
+            div2.innerHTML="<ul>";
+            for(let i=1;i<8;i++)
+            {
+                div2.innerHTML+="<li>"+i+"</li>";
+            }
+            div2.innerHTML+="</ul>";
+    }
+</script>
+</html>

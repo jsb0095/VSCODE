@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>덧셈 뺄셈 계산기</title>
+    </head>
+    <body>
+        <script>
+             function cal()
+            {   var result;
+                var num1 = Number(document.form1.num1.value);
+                var num3 = Number(document.form1.num3.value);
+                var str= document.form1.str1.value;
+                if(str == "+")
+                {
+                    result=(num1)+(num3);
+                }
+                else if(str == "-")
+                {
+                    result=(num1)-(num3);
+                }
+                else if(str=="*")
+                {
+                    result=(num1*num3);
+                }
+                else
+                {
+                    result=(num1/num3);
+                }
+                
+                alert(result);
+            }
+            
+        </script>
+            <h1>덧셈 뺄셈 계산기</h1>
+            <form name="form1" method="get"> 
+                <input type="text" name="num1" size="5"value=""/>
+                <input type="text" name="str1" size="5"value=""/>
+                <input type="text" name="num3" size="5"value=""/>
+                <input type="button" name="result" onClick="cal()"value="계산"/>
+            </form>
+        
+    </body>
+    
+</html>

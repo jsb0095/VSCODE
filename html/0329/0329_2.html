@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<head>
+
+</head>
+<bady>
+    <script>
+      inputVal="월"
+        
+    switch(inputVal)
+    {
+        case"토":
+            document.write("정상수업이아닙니다.<br/>");
+            break;
+        case"일":
+            document.write("정상수업이아닙니다.<br/>");
+            break;
+        
+        default:
+            document.write("정상수업입니다.<br/>");
+            break;
+    }
+    
+   
+    inputVal="월"
+        
+        switch(inputVal)
+        {
+            case"월":
+            case"화":
+            case"수":
+            case"목":
+            case"금":
+                document.write("정상수업.<br/>");
+                break;
+            
+            case"토":
+            case"일":
+                document.write("정상수업입니다.<br/>");
+                break;
+        }
+        
+        var num1="토"
+       
+        if( num1=="월"||num1=="화"||num1=="수"||num1=="목"||num1=="금")
+        {
+            document.write("수업입니다.<br/>");
+        } 
+        else if(num1=="토"||num1=="일")
+        {
+            document.write("휴업입니다.<br/>");
+        }
+    </script>
+</bady>

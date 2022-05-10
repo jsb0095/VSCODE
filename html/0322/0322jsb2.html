@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>   <!-- href의 존재하는 파일을 불러옴-->   <!--태그의 rel 속성은 현재 문서와 외부 리소스 사이의 연관 관계를 명시합니다.-->
+                          <!--text/ccc형식의 파일-->      <!--rel 속성은 <link> 요소에 반드시 명시되어야 하는 필수 속성입니다.-->
+    <link type="text/css" href="../css/style.css.txt" rel="stylesheet"/>
+    <style><!--text/css형식의 파일-->                        
+        #memo{/*css선택자에서는 #을 사용해서 id임을 표시*/
+            color: blue; /*style 적용되는 주석*/
+        }
+        .red{
+            color: red;  /*memo, red, intro 를 묶어서 다른 파일에 저장하여 불러와서 사용*/
+        }
+
+        .intro{
+            color: orange;
+        }
+    </style>
+    </head>
+    <body>
+  
+    <h1>css수업</h1>
+    <p>css는 디자인 입니다</p>
+<div id="memo">ID적용</div><!--id 속성은 전체 문서에서 하나의 태그를 식별하기 위해서만 사용됨 우선 순위가 가장 높음-->
+<div class="red">red</div><!--class속성은 일련의 태그를 그룹핑해서 하나처럼 제어하기 위해서 사용class속성에는 공백으로 구분된 여러 개의 calss가 표시될 수 있음-->
+<p class="red intro">hello world...</p>
+        
+ 
+    </body>
+
+
+</html>

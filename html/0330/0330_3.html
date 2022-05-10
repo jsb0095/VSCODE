@@ -1,0 +1,60 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+
+
+    </head>
+    <body>
+        <h1>continue 문</h1>
+        <script>
+            var a=3;
+            for(var b=0;b<=100;b++)
+            {   
+                //if(b==0)
+                //alert(b%a);
+                if(b%a==0)
+                {
+                    continue;
+                }
+                document.write(b+""+",");
+            }
+            
+           
+
+        </script>
+         <h1> break문 </h1>
+        <script>
+            var num2=3;
+
+            for(var i=0; ;i++)
+            {
+                if(i%num2==0)
+                {
+                    continue;
+                }
+                if(i>=100)
+                break;
+                document.write(i+" ");
+            }
+            document.write("for문 끝.");
+        </script>
+        <h1>label 문입니다</h1>
+        <script>
+            for( var i=2;i<=9;i++)
+            {
+                dan:
+                for(var j=1;j<=9;j++)
+                {
+                  if((i*j)%2==0)
+                  {
+                      //continue dan;
+                    break dan;
+                  }
+                  document.write(i+"*"+j+"="+(i*j)+"<br/>");
+                }
+                document.write("for  j 끝.<br/>");
+            }
+            document.write("for dan label 끝.");
+        </script>
+    </body>
+</html>

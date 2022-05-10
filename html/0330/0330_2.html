@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            var numm=10;
+    //함수 구현은 <head> 하는게 깔끔하고 좋다
+        function add(x,y)//()매개변수
+    {/*1.함수의 이름
+        2.괄호 안에 쉼표,로 구분되는 함수의 매개변수
+        3.중괄호({})로 둘러싸인 자바스크립트 실행문
+        문법)function함수이름(매개변수1,매개변수2,.....){함수가 호출 되었을때 실행하고자 하는 실행문;}*/
+
+        return x+y;//return값은 한개의 값만 옮길수 있다(ex:retrun x+y,x-y);
+    }
+        function sqr(x)
+        {
+            return x*x;
+        }
+        
+        </script>
+    </head>
+    <body>
+        <h1>함수</h1>
+        <script>
+            var val=add(3,5);
+            document.write(val);
+    
+
+           
+        </script>
+        <h1>함수 공유</h1>
+        <script>
+            var sqrNum=sqr;
+            document.write(sqr(4)+"<br/>");
+            document.write(sqrNum(4)+"<br/>")
+        </script>
+          
+        </script>
+        <h1>지역변수</h1>
+        <script>
+            function localNum()
+            {
+                var num=10;
+                document.write("함수 내부 변수 num타입은"+typeof num+"입니다.<br/>");
+            }
+            localNum();
+            document.write("함수호출이 끝난후 변수 num타입은"+typeof num+"입니다.<br/>");
+        </script>
+          <br/>
+          <h1>전역변수</h1>
+        <script>
+            function globalNum()
+            {
+                document.write("함수 내부에서 변수 numm의 값은"+numm+"입니다.<br/>");
+                numm=20;
+            }
+                globalNum();
+                document.write("함수 호출이 끝난후 변수numm의 값은"+numm+"입니다<br/>")
+                
+        </script>
+           <h1>함수내부 전역변수</h1>
+           <script>
+               function globalNum2()
+               {
+                   nnum=100
+                   document.write("함수 내부에서 변수 nnum의 값은"+nnum+"입니다.<br/>");
+                   
+               }
+                   globalNum2()
+                   document.write("함수 호출후 변수nnum값은"+nnum+"입니다<br/>")
+                   
+           </script>
+             <h1>함수 매개변수에 의한 연산</h1>
+            <script>
+                function addNum2(x,y,z)
+                {
+                    if(x===undefined)//undefined를 숫자로 표현
+                    x=0
+                    if(y===undefined)
+                    y=0
+                    if(z===undefined)
+                    z=0
+                return x+y+z;                    
+                    
+                }
+                   document.write(addNum2(1,2,3,)+"<br/>");
+                   document.write(addNum2(1,2)+"<br/>"); 
+                   document.write(addNum2(1)+"<br/>");
+                   document.write(addNum2()+"<br/>");
+                    
+            </script>
+    </body>
+</html>

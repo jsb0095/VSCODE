@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*input 태그를 블록 요소로 지정*/
+        /* input{
+            display:block
+        } */
+        </style>
+</head>
+<body>       
+    <!--input:태그이름/  type:속성/  text:속성값-->   
+    아이디:<input type="text" id="username" ><!--자신의 영역만 사용 인라인요소-->
+    <!--버튼을 클릭했을 때 fun1이라는 함수 호출-->
+    <button onclick="fun1()">아이디입력완료</button><br/>
+
+
+    비밀번호:<input type="password"id="passname">
+    비밀번호입력값확인:<input type="text" id="password-check">
+    <button onclick="fun2()">비밀번호체크</button>
+    <!--위 버튼 클릭시  fun2 함수를 호출하고
+    비밀번호 입력값 확인 칸에 비밀번호에서 입력한 값을 출력하기-->
+
+    <h1>안녕</h1><!--한줄 다쓰는 요소를 불록요소-->
+    <h2>반가워요</h2>
+</body>
+        <script>
+            function fun1(){
+                console.log("fum1 호출됨");
+                //아이디에 입력한 값을 가져오기
+                console.log(document.getElementById("username").value);
+                const usernameTag = document.getElementById("username");
+                console.log(usernameTag);
+                const usernameTagvalue = document.getElementById("username").value;
+                //아이디에 벨류값 가져오기 
+                console.log(usernameTagvalue);
+                //똑같은 방법 
+                console.log(usernameTag.value);
+            }
+                function fun2()
+                {
+                    const password=document.getElementById("passname").value;
+                    console.log(`비밀번호 입력값: ${password}`);
+                    let passwordCheck=document.getElementById("password-check");
+                    passwordCheck=password;
+
+                    document.getElementById("password-check").value= password;
+
+                }
+                
+            
+            console.log(document);
+            //id=username인 요소를 js로 가져옴
+            console.log(document.getElementById("username"));
+            // vlaue 값을 출력 
+            console.log(document.getElementById("username").value);
+            //querySelector():태그
+            console.log(document.querySelector("input"));//첫번째 값만 가져온다
+            console.log(document.querySelectorAll("input"));//모든 값을 가져온다
+            //querySelector():특정 아이디
+            console.log(document.querySelector("#username"));
+        </script>
+</html>

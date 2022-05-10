@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>3번째</title>
+        <style>
+            #nav li a {
+                color: orange;
+            }
+            h1,#link{
+                color: red;
+            }
+        </style>
+        <style>
+            a:link{
+                color: red;
+            }
+            a:visited{
+                color: blue;
+            }
+            a:hover{
+                color: green;
+            }
+            a:active{
+                color: orange;
+            }
+        </style>
+    </head>
+        <body>
+            <div id="nav">
+                <ul>
+                    <li>홈</li>
+                    <li><a href="http://www.icia.co.kr">인천일보아카데미</a></li>
+                    <li>고객센터</li>
+                </ul>
+            </div>
+            <ul>
+                <li>홈</li>
+                <li>인천일보아카데미</li>
+                <li>고객센터</li>
+            </ul>
+            <br/>
+            <h1>하나의 css선언을 여러개의 선택자에 적용</h1>  <!-- h1과 #link 선택자 사이에,(콤마)를 두어 글씨의 색을 붉은색으로 지정-->
+            <a id="link" href="http://www.icia.co.kr">인천일보아카데미</a>
+            <br/><br/>
+            <a href="http://www.kbs.co.kr">링크 상태 체크</a>
+        </body>
+</html>

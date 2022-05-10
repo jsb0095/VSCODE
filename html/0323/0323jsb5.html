@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>자바 첫수업</title>
+    </head>
+    <body>                           //               
+     <h1>HTML 요소를 이용한 innerHTML 프로퍼티</h1>
+     <P id="text">이 문장을 바꿀 것입니다</P>
+
+     <script>
+       //   document뜻:(문서)           (Element)뜻:객체
+         // document:변수명 /document.getElementById=문법
+         var str= document.getElementById("text");
+         str.innerHTML="이 문장으로 바뀌었습니다.";
+         //innerHTML:태그 자체를 가져오거나 바꾸는 기능 (바뀌는 범위 : (<태그>텍스트</태그>) => 전체 다 바뀜)
+
+
+     </script>
+     <br/><br/>
+     <h1>Document 객체의 write()매서드</h1>
+     <script>
+
+                
+         document.write(4*5);
+       //document.write() 메소드는 웹 페이지가 로딩될 때 실행되면, 웹 페이지에 가장 먼저 데이터를 출력합니다.
+        
+     </script>
+     <br/>
+     <button onclick="document.write(4*5)">버튼을 눌러보세요.</button>
+     <!--console.log테스트-->
+     <h1>--console.log()메서드--</h1>
+     <p>f12를눌러서 콘솔 화면을 열면 결과를 확인할수 있습니다</p>
+     <script>
+         //console.log 웹페이지 콘솔창에만 나타남
+         console.log(4*5)
+         </script>
+    </body>
+</html>

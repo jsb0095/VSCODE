@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" id="ename1">@<input type="text" id="ename2"> 선택: <select id="email" onchange="emailSelect()">
+                                                                            <option value="naver.com">naver.com</option>
+                                                                            <option value="gogle.com">gogle.com</option>
+                                                                            <option value="nate.com">nate.com</option>
+                                                                            <option value="daum.com">daum.com</option>
+    </select>
+</body>
+<script>
+        function emailSelect(){
+
+            const ename2=document.getElementById("ename2");
+            const email=document.getElementById("email").value;
+            ename2.value=email;
+
+        }
+</script>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>같은 변수에 다른 타입의 값 대입</h1>
+        <p id="result"></p>
+        <script>
+            var num=20;
+            document.getElementById("result").innerHTML=num+"<br/>";
+            num="이십";/*이부분에서 숫자를 문자열로 변환하여 다음 변수부터 문자열로 나타남*/
+            document.getElementById("result").innerHTML+=num+"<br/>";
+            var num; /*숫자를 문자열로 바꾼후 다시 변경할수 없다*/
+            document.getElementById("result").innerHTML+=num+"<br/>";
+           
+        </script>      
+        <br/>
+        <h1>묵시적 타입변환</h1>
+        <p id="result2"></p>
+        <script>
+            var result= 10+"문자열";
+            document.getElementById("result2").innerHTML=result+"<br/>";
+            result= "3"*"5";
+            document.getElementById("result2").innerHTML+=result+"<br/>";
+            result= 1-"문자열";
+            document.getElementById("result2").innerHTML+=result;
+        </script>
+        <h1>명시적 타입변환</h1>
+        <p id="result3"></p>
+        <script>                                        /*소문자 대문자 주의!!*/
+            document.getElementById("result3").innerHTML=Number("10")+"<br/>";
+            document.getElementById("result3").innerHTML+=(true)+"<br/>";
+            document.getElementById("result3").innerHTML+=Boolean(0)+"<br/>";
+            document.getElementById("result3").innerHTML+=Object(3);
+            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>덧셈 뺄셈 계산기</title>
+    </head>
+    <body>
+        <script>
+            function add(num1,num3)
+            {
+                return num1+num3;
+            }
+            function sub(num1,num3)
+            {
+                return num1-num3;
+            }
+            function cal()
+            {
+             var number1=document.form1.num1.value;
+             var number3=document.form1.num3.value;
+             var symbol=document.form1.sym1.value.trim();//trim 앞에 있는 어떤값에 맨앞 맨뒤 공백 제거
+                var  val;
+                var result
+             if(symbol=="+")
+             {
+                 val="덧셈";
+                 result=add(parseInt(number1),(parseInt(number3)));
+                //alert("덧셈:"+(parseInt(number1)+parseInt(number3)));
+             }
+             else if(symbol=="-")
+             {
+                 //alert("뺄셈:"+(parseInt(number1)-parseInt(number3)));
+                 val="뺄셈";
+                 result=sub(parseInt(number1),(parseInt(number3)));
+             }
+                alert(val+"에 대한 결과는"+result+"입니다.")
+            }
+            
+        </script>
+        <h1>덧셈 뺄셈 계산기</h1>
+            <form name="form1"method="get"action="0328.html"> 
+                <input type="text" name="num1"id="num1" size="5"value=""/>&nbsp;
+                <input type="text" name="sym1" id="sym1"size="3"value=""/>&nbsp;
+                <input type="text" name="num3" id="num3"size="5"value=""/>&nbsp;
+                <input type="button" name="result" onClick="cal()"value="계산"/>
+            </form>
+        
+    </body>
+    
+</html>

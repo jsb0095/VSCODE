@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>연산자</title>
+</head>
+<body>
+    <h1>증감연산자</h1>
+    <script>
+        var x = 10, y=8;
+        document.write((++x -3) + "<br/>");
+        document.write("x : " + x + "<br/>"); //x=10이 출력되는게 X
+        document.write("y++ - 3 : " + (y++ - 3) + "<br/>");
+        document.write("y : " + y + "<br/>");
+    </script>
+
+    <h1>증감연산자의 연산순서</h1>
+    <script>
+        x = 6;
+        y = x-- + 5 + --x;
+        document.write("x : " + x + "<br/>");
+        document.write("y : " + y + "<br/>");
+    </script>
+
+    <h1>산술연산자</h1>
+    <script>
+        x = 3, y = 10;
+        document.write("x + y = " + (x + y) +"<br/>");
+        document.write("x - y = " + (x - y) +"<br/>");
+        document.write("x * y = " + (x * y) +"<br/>");
+        document.write("x / y = " + (x / y) +"<br/>");
+        document.write("x % y = " + (x % y) +"<br/>");
+    </script>
+
+    <h1>대입연산자</h1>
+    <script>
+        x = 10, y = 8;
+        var z = 1;
+        x = x - 5;
+        document.write("x : " + x + "<br/>");
+        y -= 5;
+        document.write("y : " + y + "<br/>");
+        z =- 5; //js에서만 z=-5로 인식함
+        document.write("z : " + z + "<br/>");
+    </script>
+
+    <h1>비교연산자</h1>
+    <script>
+        x = 10, y = 14;
+        var a = "abc", b = "bcd";
+        document.write("(x > y) : " + (x > y) + "<br/>");
+        document.write("(a <= b) : " + (a <= b) + "<br/>");
+        document.write("(x < a) : " + (x < a) + "<br/>"); //문자와 숫자는 비교할 수가 없어서 false
+    </script>
+
+    <h1>일치연산자</h1>
+    <script>
+        x = 3, y = "3", z = 3;
+        document.write("x == y : " + (x == y) + "<br/>");
+        document.write("x === y : " + (x === y) + "<br/>");
+        document.write("x === z : " + (x === z) + "<br/>");
+    </script>
+
+    <h1>논리연산자</h1>
+    <script>
+        x = true, y = false;
+        document.write(" x && y : " + (x && y) + "<br/>");
+        document.write(" x || y : " + (x || y) + "<br/>");
+        document.write(" !x : " + (!x) + "<br/>");
+    </script>
+</body>
+</html>

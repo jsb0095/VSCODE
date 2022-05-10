@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+</head>
+<body>
+<script>
+      var arr=[3,4,5];
+                    //"1234"=4 "한글"=2 ""=0
+for(var i=0; i < arr.length; i++)//.length는 문자열의 길이를 반환하는 속성입니다.
+{
+    document.write("arr["+i+"]="+arr[i]+"<br/>");
+}
+    document.write("<br/>");
+    
+    for(var i in arr)//질문
+    {
+        document.write("arr["+i+"]="+arr[i]+"<br/>");
+    }
+    document.write("<br/>");
+   
+    for(var i of arr)//for of는 변수의 벨류값을 통째로 가져온다
+    {
+        document.write(i+"");
+    }                      //"3,4,5"
+ 
+</script>
+</body>
+</html>

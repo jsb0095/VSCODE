@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>계산기</h2>
+    number1:<input type="text" id="num1">
+    number2: <input type="text" id="num2">
+    <button onclick="cal()">계산</button>
+    <div id="result">여기에 계산결과를 출력</div>
+
+    <script>
+        function cal()
+        {
+        //    let number1=document.getElementById("num1").value;
+        //    let number2=document.getElementById("num2").value;
+        //    console.log("number1:"+number1,"number2:"+number2);
+        //    console.log(typeof number1);
+        //    console.log(typeof number2);
+        //    number1=parseInt(number1);
+        //    number2=parseInt(number2);
+        //    console.log("형변환 후");
+        //    comsole.log(typeof number1);
+        //    comsole.log(typeof number2);
+        //    num1,num2 는 string 타입
+        //    number로 형 변환 :parsieInt()
+
+           const div1= document.getElementById("result");
+           let number1=document.getElementById("num1");
+           let number2=document.getElementById("num2");
+           div1.innerHTML=parseInt(number1.value)+parseInt(number2.value);
+           //parseInt 문자타입을 정수타입으로 바꿔준다
+        }
+    </script>
+</body>
+</html>
