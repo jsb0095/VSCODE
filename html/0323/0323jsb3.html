@@ -1,7 +1,7 @@
 !DOCTYPE html>
 <html>
     <head>             
-        <script src="../수업/js/ex.js"></script>
+       
                        <!--상대경로../안내따라해도 편함--> 
     </head>
         <body>
@@ -10,11 +10,16 @@
                 <!--printDate:현재 날짜와 시간을 표시해준다-->
      <button onclick="printDate()">현재 날씨와 시간표시하기</button>
             <!--onclick:클릭했을때 이벤트 발생-->
+
+            
      <p id="date"></p>
     <br/><br/>
     <p id="info"></p>
     <script>
-        
+        function printDate(){
+        const date =  document.getElementById("date");
+        date.innerHTML=Date();
+        }
          var num= 10;
          var name= "홍길동"
          var str1;

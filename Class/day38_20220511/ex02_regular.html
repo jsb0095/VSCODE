@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input
+        {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!--정규식표현(Regular Expression)-->
+    <!--1.영문소문자만 5~10글자-->
+    <input type="text" id="id1" onblur="id1Cheak()">
+    <p id="id1-result"></p>
+     <!--1.영문소문자랑 숫자만 5~10글자-->
+     <input type="text" id="id2" onblur="id2Cheak()">
+     <p id="id2-result"></p>
+     <!--1.영문소문자(필수) 숫자만 5~10글자-->
+     <input type="text" id="id3" onblur="id3Cheak()">
+     <p id="id3-result"></p>
+     <!--1.영문소문자(필수) 숫자(필수) 5~10글자-->
+     <input type="text" id="id4" onblur="id4Cheak()">
+     <p id="id4-result"></p>
+     <!--1.영문소문자(필수) 숫자(필수) 영대문자(필수) 5~10글자-->
+     <input type="text" id="id5" onblur="id5Cheak()">
+     <p id="id5-result"></p>
+     <!--1.영문소문자(필수) 숫자(필수) 영대문자(필수)특수문자(필수,-_!#$) 5~10글자-->
+     <input type="text" id="id6" onblur="id6Cheak()">
+     <p id="id6-result"></p>
+      <!--7.전화번호형식(000-0000-0000)-->
+      <input type="text" id="id7" onblur="id7Cheak()">
+      
+    
+</body>
+<script>
+    function id1Cheak(){
+        const id1= document.getElementById("id1").value;
+        const exp=/^[a-z]{5,10}$/;
+        if(id1.match(exp)){
+            console.log("일치");
+        }else{
+            console.log("불일치");
+        }
+    }
+    function id2Cheak(){
+        const id= document.getElementById("id2").value;
+        const exp=/^[a-z\d]{5,10}$/;
+        if(id.match(exp)){
+            console.log("일치");
+        }else{
+            console.log("불일치");
+        }
+    }
+    function id3Cheak(){
+        const id= document.getElementById("id3").value;
+        const exp=/^(?=.*[a-z])[a-z\d]{5,10}$/;
+        if(id.match(exp)){
+            console.log("일치");
+        }else{
+            console.log("불일치");
+        }
+    }
+    function id4Cheak(){
+        const id= document.getElementById("id4").value;
+        const exp=/^(?=.*[a-z])(?=.*\d)[a-z\d]{5,10}$/;
+        if(id.match(exp)){
+            console.log("일치");
+        }else{
+            console.log("불일치");
+        }
+    }
+    function id5Cheak(){
+        const id= document.getElementById("id5").value;
+        const exp=/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{5,10}$/;
+        if(id.match(exp)){
+            console.log("일치");
+        }else{
+            console.log("불일치");
+        }
+    }
+    function id6Cheak(){
+        const id= document.getElementById("id6").value;
+        const exp=/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[-_!#$])[A-Za-z\d-_!#$]{5,10}$/;
+        if(id.match(exp)){
+            console.log("일치");
+        }else{
+            console.log("불일치");
+        }
+    }
+    function id7Cheak(){
+        const id= document.getElementById("id7").value;
+        const exp=/^\d{3}-\d{4}-\d{4}$/;
+        if(id.match(exp)){
+            console.log("일치");
+        }else{
+            console.log("불일치");
+        }
+    }
+</script>
+</html>
